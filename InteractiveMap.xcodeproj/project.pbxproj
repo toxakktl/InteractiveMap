@@ -12,9 +12,13 @@
 		8E0530AD2020F313005B2C47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0530AB2020F313005B2C47 /* Main.storyboard */; };
 		8E0530AF2020F313005B2C47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0530AE2020F313005B2C47 /* Assets.xcassets */; };
 		8E0530B22020F313005B2C47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E0530B02020F313005B2C47 /* LaunchScreen.storyboard */; };
+		8E0530DE2024E8F3005B2C47 /* kostanay-region.json in Resources */ = {isa = PBXBuildFile; fileRef = 8E0530DD2024E8F3005B2C47 /* kostanay-region.json */; };
+		8E0530E42025BD80005B2C47 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0530E32025BD80005B2C47 /* RoundButton.swift */; };
+		F765EC91B5F3A06C81220AD7 /* Pods_InteractiveMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0585EA4FD843D2499708BD2 /* Pods_InteractiveMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30B317738F4917E0E96EF7F8 /* Pods-InteractiveMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractiveMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-InteractiveMap/Pods-InteractiveMap.release.xcconfig"; sourceTree = "<group>"; };
 		8E0530A42020F313005B2C47 /* InteractiveMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E0530A72020F313005B2C47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E0530A92020F313005B2C47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,10 @@
 		8E0530AE2020F313005B2C47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0530B12020F313005B2C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E0530B32020F313005B2C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E0530DD2024E8F3005B2C47 /* kostanay-region.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "kostanay-region.json"; sourceTree = "<group>"; };
+		8E0530E32025BD80005B2C47 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		B0585EA4FD843D2499708BD2 /* Pods_InteractiveMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InteractiveMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB580053957D593360540A02 /* Pods-InteractiveMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InteractiveMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InteractiveMap/Pods-InteractiveMap.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F765EC91B5F3A06C81220AD7 /* Pods_InteractiveMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		592E26055CBD8CAE9C30361D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0585EA4FD843D2499708BD2 /* Pods_InteractiveMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E05309B2020F312005B2C47 = {
 			isa = PBXGroup;
 			children = (
 				8E0530A62020F313005B2C47 /* InteractiveMap */,
 				8E0530A52020F313005B2C47 /* Products */,
+				E73792226BAC18CA6E92BA94 /* Pods */,
+				592E26055CBD8CAE9C30361D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +73,57 @@
 		8E0530A62020F313005B2C47 /* InteractiveMap */ = {
 			isa = PBXGroup;
 			children = (
+				8E0530E22025BD63005B2C47 /* Model */,
 				8E0530A72020F313005B2C47 /* AppDelegate.swift */,
-				8E0530A92020F313005B2C47 /* ViewController.swift */,
-				8E0530AB2020F313005B2C47 /* Main.storyboard */,
-				8E0530AE2020F313005B2C47 /* Assets.xcassets */,
-				8E0530B02020F313005B2C47 /* LaunchScreen.storyboard */,
+				8E0530DF2024F41D005B2C47 /* Supporting files */,
+				8E0530E02024F47D005B2C47 /* Controllers */,
+				8E0530E12024F49D005B2C47 /* Views */,
 				8E0530B32020F313005B2C47 /* Info.plist */,
 			);
 			path = InteractiveMap;
+			sourceTree = "<group>";
+		};
+		8E0530DF2024F41D005B2C47 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				8E0530AE2020F313005B2C47 /* Assets.xcassets */,
+				8E0530B02020F313005B2C47 /* LaunchScreen.storyboard */,
+				8E0530DD2024E8F3005B2C47 /* kostanay-region.json */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8E0530E02024F47D005B2C47 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8E0530A92020F313005B2C47 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8E0530E12024F49D005B2C47 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E0530AB2020F313005B2C47 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E0530E22025BD63005B2C47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E0530E32025BD80005B2C47 /* RoundButton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E73792226BAC18CA6E92BA94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB580053957D593360540A02 /* Pods-InteractiveMap.debug.xcconfig */,
+				30B317738F4917E0E96EF7F8 /* Pods-InteractiveMap.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E0530B62020F313005B2C47 /* Build configuration list for PBXNativeTarget "InteractiveMap" */;
 			buildPhases = (
+				270A116FBA36D30F0545E74E /* [CP] Check Pods Manifest.lock */,
 				8E0530A02020F313005B2C47 /* Sources */,
 				8E0530A12020F313005B2C47 /* Frameworks */,
 				8E0530A22020F313005B2C47 /* Resources */,
+				91A761018206B10F573AC4C7 /* [CP] Embed Pods Frameworks */,
+				3986C84DD7246EC04D9F6D16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,16 +191,72 @@
 				8E0530B22020F313005B2C47 /* LaunchScreen.storyboard in Resources */,
 				8E0530AF2020F313005B2C47 /* Assets.xcassets in Resources */,
 				8E0530AD2020F313005B2C47 /* Main.storyboard in Resources */,
+				8E0530DE2024E8F3005B2C47 /* kostanay-region.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		270A116FBA36D30F0545E74E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InteractiveMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3986C84DD7246EC04D9F6D16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InteractiveMap/Pods-InteractiveMap-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InteractiveMap/Pods-InteractiveMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A761018206B10F573AC4C7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InteractiveMap/Pods-InteractiveMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E0530A02020F313005B2C47 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E0530E42025BD80005B2C47 /* RoundButton.swift in Sources */,
 				8E0530AA2020F313005B2C47 /* ViewController.swift in Sources */,
 				8E0530A82020F313005B2C47 /* AppDelegate.swift in Sources */,
 			);
@@ -272,29 +393,33 @@
 		};
 		8E0530B72020F313005B2C47 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB580053957D593360540A02 /* Pods-InteractiveMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QXYXAL442V;
 				INFOPLIST_FILE = InteractiveMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.tulpar.InteractiveMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8E0530B82020F313005B2C47 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30B317738F4917E0E96EF7F8 /* Pods-InteractiveMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QXYXAL442V;
 				INFOPLIST_FILE = InteractiveMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kz.tulpar.InteractiveMap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
